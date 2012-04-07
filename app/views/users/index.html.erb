@@ -7,7 +7,7 @@
 	<% @users.each do |user| %>
 	
 	<li>
-			<%= gravatar_for user, :size => 30 %>
+			<%= gravatar_for user, :size => 50 %>
 			<%= link_to user.name, user %>
 
 			<% if current_user.admin? %>
@@ -20,6 +20,14 @@
 	
 	<% end %>
 </ul>
+<%= image_tag("dunkmans.jpg", :alt => "dennissumlin.com", :class => "round") %> <%= image_tag("kobeGlass.jpg", :alt => "dennissumlin.com", :class => "round") %> <%= image_tag("kdurants.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+<%= image_tag("mangos2.jpg", :alt => "dennissumlin.com", :class => "round") %> <%= image_tag("vadar.jpg", :alt => "dennissumlin.com", :class => "round") %> <%= image_tag("shroom.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+
+
+<%= image_tag("tower.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+ 
+
+
 <div class="apple_pagination">
 <%= will_paginate @user%>
 </div>
