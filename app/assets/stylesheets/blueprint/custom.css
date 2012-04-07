@@ -20,9 +20,17 @@ padding-top: 20px;
 header img {
 
 padding 1em;
+background: white;
+width: 160px;
+height: 100px;
+}
+
+table td img {
+
+padding 1em;
 background: silver;
-width: 960px;
-height: 200px;
+width: 160px;
+height: 100px;
 }
 
 section {
@@ -31,7 +39,7 @@ text-align: center;
 margin-top: 2em;
 font-size: 120%;
 padding: 20px;
-background: black;
+background: navy;
 border: 1px groove white;
 color: white;
 
@@ -41,21 +49,21 @@ color: white;
 
 section h1 {
 
-color:#CC9966;
+color:white;
 font-size: 200%;
 
 }
 
 a {
 
-color: #CC9966;
+color: navy;
 text-decoration: none; 
 
 }
 
 a:hover {
 
-color: #CC9966;
+color: navy;
 
 text-decoration: underline;
 
@@ -64,7 +72,7 @@ text-decoration: underline;
 
 a:visited {
 
-color: #F1E6D3;
+color: white;
 
 }
 
@@ -72,7 +80,7 @@ color: #F1E6D3;
 nav {
 
     float: right; 
-    background: black;
+    background: navy;
     padding: 0 0.7em;
     white-space: nowrap;
     color: white;
@@ -115,7 +123,7 @@ nav ul li a:visited {
 nav ul li a:hover {
 
     text-decoration: underline;
-    color:#CC9966;
+    background-color:black;
     font-family: cursive;
 
 
@@ -180,7 +188,7 @@ table.profile {
 
 width: 100%;
 padding: 1em;
-border: 1px groove #CC9966;
+border: 1px groove white;
 background: white;
 
 
@@ -193,7 +201,7 @@ width: 70%;
 padding: 1em;
 color:white;
 border: 1px groove white;
-background: black;
+background: navy;
 
 
 }
@@ -203,16 +211,16 @@ td.sidebar {
 width: 30%
 padding: 1em;
 vertical-align: top;
-background-color:black;
+background-color:navy;
 color: white;
-border: 1px groove #CC9966;
+border: 1px groove white;
 
 
 }
 
 .profile img.gravatar {
 
-border: 1px groove #CC9966;
+border: 1px groove white;
 margin-bottom: -15px;
 
 
@@ -221,7 +229,7 @@ margin-bottom: -15px;
 
 .profile img.gravatar {
 
-border: 1px groove #CC9966;
+border: 1px groove white;
 margin-bottom: -15px;
 
 
@@ -323,7 +331,7 @@ margin-bottom: 0.3em
 table.microposts {
 
 margin-top: 1em;
-background:black;
+background:navy;
 
 
 
@@ -334,16 +342,16 @@ table.microposts tr {
 
 
 height: 70px;
-color: #CC9966;
+color: white;
 
 }
 
 
 table.microposts tr td.gravatar {
 
-border-top: 1px solid #CC9966;
+border-top: 1px solid white;
 vertical-align: top;
-background:black;
+background:navy;
 width: 50px;
 
 
@@ -352,11 +360,11 @@ width: 50px;
 
 table.microposts tr td.micropost {
 
-border-top: 1px solid #CC9966;
+border-top: 1px solid white;
 vertical-align: top;
 padding-top: 10px;
 background:black;
-border-top: 1px solid #CC9966;
+border-top: 1px solid white;
 
 
 
@@ -368,7 +376,7 @@ table.microposts tr td.micropost span.timestamp {
 display: block;
 font-size: 85%;
 color: white;
-background:black;
+background:navy;
 
 
 }
@@ -403,12 +411,12 @@ font-size: 80%;
 form.new_micropost {
 
 margin-bottom: 2em;
-border: 1px groove #CC9966;
+border: 1px groove white;
 
 }
 
 form.new_micropost textarea {
-border: 1px solid #CC9966;
+border: 1px solid white;
 height: 4em;
 margin-bottom: 0;
 
@@ -462,7 +470,7 @@ margin-bottom: 0;
 
 .apple_pagination {
   background: #f1f1f1;
-  border: 1px solid #CC9966;
+  border: 1px solid white;
   text-align: center;
   padding: 1em;
   cursor: default;

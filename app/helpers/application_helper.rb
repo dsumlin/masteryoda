@@ -13,7 +13,7 @@ module ApplicationHelper
     
     def logo
         
-        image_tag("banner.jpg", :alt => "dennissumlin.com", :class => "round")
+        image_tag("ezlogo.png", :alt => "dennissumlin.com", :class => "round")
         
         end
     
