@@ -1,8 +1,6 @@
 <% if @feed_items.any? %>
 	<table class="microposts" summary="Micropost">
-	
 	<%= render :partial => 'users/shared/feed_item', :collection => @feed_items %>
-	
 	
 	</table>
 	

@@ -1,18 +1,18 @@
 <tr>
-<td class="gravatar">
+<td class="gravatar round">
 <%= link_to gravatar_for(feed_item.user), feed_item.user %>
 </td>
-<td class="micropost">
+<td class="micropost round">
 
-<span class="user">
-	<%= link_to feed_item.user.name, feed_item.user %>
+<span class="user round">
+	<%= link_to feed_item.user.name, feed_item.user %> POSTED THIS: 
 </span>
-<span class="content">
+<span class="content round">
 
 <%= feed_item.content %>
 
 </span>
-<span class="timestamp">
+<span class="timestamp round">
 
 Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
 
@@ -20,9 +20,9 @@ Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
 
 </td>
 <% if current_user?(feed_item.user) %>
-<td>
+<td class="micropost round">
 
-<%= link_to "delete", feed_item, :method => :delete,
+<%= link_to "Delete", feed_item, :method => :delete,
 								  :confirm => "sure?",
 								  :title => feed_item.content %>
 

@@ -4,6 +4,8 @@ width: 960px;
 
 }
 
+.backg {background:navy;
+		color:white}
 
 body {
 
@@ -24,7 +26,6 @@ background: white;
 width: 160px;
 height: 100px;
 }
-
 
 
 section {
@@ -143,8 +144,8 @@ a.signup_button {
 
 .signup_button2 {
 
-    background: black;
-    color: #CC9966;
+    background: navy;
+    color: white;
 
 
 }
@@ -177,7 +178,6 @@ float: none;
 
 
 }
-
 table.profile {
 
 width: 100%;
@@ -199,10 +199,13 @@ background: navy;
 
 
 }
-
+td.main a {color:turquoise;
+			font-weight:bold;
+			font-size: 1.5em;
+			}
 td.sidebar {
 
-width: 30%
+width: 30%;
 padding: 1em;
 vertical-align: top;
 background-color:navy;
