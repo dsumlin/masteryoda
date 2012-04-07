@@ -1,0 +1,32 @@
+
+<% if signed_in? %>
+
+<table class="front" summary="Signed in members">
+
+	<tr>
+	
+	 <td class="main">
+	 	<h1 class="micropost">What's Going On Today?</h1>
+	 	<%= render 'users/shared/micropost_form' %>
+	 	<%= render 'users/shared/feed' %>
+	 	<%= render 'users/shared/stats' %>
+
+
+	 </td>
+	<td class="sidebar round">
+		 	<%= render 'users/shared/user_info.html' %>
+
+	</td>
+	
+	</tr>
+
+
+</table>
+
+<% else %>
+<h1>Welcome To Dennis On Ruby On Rails</h1>
+<p>Welcome to my blog site. This site was created by hand with Ruby on Rails. Sign up below and blog away!! </p>
+<%= link_to "Become a member now!", 'signup', :class => "signup_button round" %>
+
+
+<% end %>

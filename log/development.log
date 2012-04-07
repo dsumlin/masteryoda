@@ -1,0 +1,159 @@
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-07 12:55:46 -0400
+Processing by PagesController#home as HTML
+Completed 500 Internal Server Error in 42ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/models/user.rb:89:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:73:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:15:in `current_user'
+  app/helpers/sessions_helper.rb:24:in `signed_in?'
+  app/controllers/pages_controller.rb:6:in `home'
+
+
+  Rendered /Volumes/dsumlin/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+  Rendered /Volumes/dsumlin/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Volumes/dsumlin/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.3ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120317053530)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120317053530')
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddEmailUniqenessIndex (20120317173535)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120317173535')[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to AddSaltToUsers (20120317185537)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.1ms)[0m  ALTER TABLE "users" ADD "salt" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120317185537')[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to AddPasswordToUsers (20120317221623)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "encrypted_password" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120317221623')[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+Migrating to AddAdminToUsers (20120323060736)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "admin" boolean DEFAULT 'f'
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120323060736')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateMicroposts (20120323212257)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_microposts_on_user_id" ON "microposts" ("user_id")
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120323212257')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateBlogposts (20120323212634)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "blogposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("blogposts")[0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_blogposts_on_user_id" ON "blogposts" ("user_id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120323212634')[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to CreateRelationships (20120325210159)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "relationships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_id" integer, "followed_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120325210159')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateFriendships (20120325210452)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "friendships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_id" integer, "followed_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("friendships")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_friendships_on_follower_id" ON "friendships" ("follower_id")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("friendships")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_friendships_on_follower_id')
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_friendships_on_followed_id" ON "friendships" ("followed_id")[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120325210452')
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddPhotoToMicroposts (20120329044718)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "microposts" ADD "photo_file_name" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "microposts" ADD "photo_content_type" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "microposts" ADD "photo_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120329044718')
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("blogposts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_blogposts_on_user_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("friendships")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_friendships_on_followed_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_friendships_on_follower_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_microposts_on_user_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("relationships")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 29 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 29 LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Compiled blueprint/screen.css  (0ms)  (pid 3444)
+Compiled blueprint/print.css  (0ms)  (pid 3444)
+Compiled blueprint/ie.css  (0ms)  (pid 3444)
+Compiled blueprint/custom.css  (0ms)  (pid 3444)
+  Rendered layouts/_stylesheets.html.erb (79.5ms)
+Compiled jquery.js  (2ms)  (pid 3444)
+Compiled jquery_ujs.js  (0ms)  (pid 3444)
+Compiled pages.js  (107ms)  (pid 3444)
+Compiled sessions.js  (1ms)  (pid 3444)
+Compiled users.js  (0ms)  (pid 3444)
+Compiled application.js  (198ms)  (pid 3444)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 29 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 29 LIMIT 1
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 374ms (Views: 329.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /blueprint/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/blueprint/custom.css?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /blueprint/custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /jquery.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /banner.jpg - 304 Not Modified (5ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-04-07 12:56:10 -0400
+Served asset /blueprint/print.css - 304 Not Modified (2ms)

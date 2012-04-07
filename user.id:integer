@@ -1,0 +1,6 @@
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20120323212634_create_blogposts.rb
+[1m[32m      create[0m    app/models/blogpost.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/blogpost_test.rb
+[1m[32m      create[0m      test/fixtures/blogposts.yml

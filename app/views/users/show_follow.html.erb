@@ -1,0 +1,23 @@
+<table summary="Following Summary">
+	<tr>
+		<td class="main">
+			<h1><%= @title %></h1>
+			<% if @users.any? %>
+				<ul class="users">
+				 <%= render @users %>
+				 </ul>
+				 <% end %>
+				</td>
+		<td class="sidebar round">
+	<strong >Name:</strong><br /> <%= @user.name %><br />
+	<strong >Email:</strong> <br /><%= @user.email %><br />
+	<strong >Comments:</strong> <br /><%= @user.microposts.count %>
+	<strong><%= render 'users/shared/stats' %></strong>
+	<% if @users.any? %>
+		<% @users.each do |user| %>
+			<%= link_to gravatar_for(user, :size => 30), user %>
+			<% end %>
+		   <% end %>	
+	</td>
+	</tr>
+</table>	
