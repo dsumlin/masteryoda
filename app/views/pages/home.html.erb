@@ -4,7 +4,7 @@
 <table class="front" summary="Signed in members">
 
 	<tr>
-	 <td class="main round">
+	 <td class="sidebar round">
 	 	<h1 class="micropost">What's Going On Today?</h1>
        	<%= render 'users/shared/micropost_form' %>
 	 	<%= render 'users/shared/feed' %>
@@ -12,6 +12,22 @@
 
 
 	 </td>
+	<td class="sidebar round">
+		
+		<%= image_tag("river.jpg", :alt => "dennissumlin.com", :class => "round") %>
+		 <%= image_tag("pinkflower.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+		<%= image_tag("flowerPatch2.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+		<%= image_tag("beach.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+		<%= image_tag("duck.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+		<%= image_tag("wall.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+		<%= image_tag("window.jpg", :alt => "dennissumlin.com", :class => "round") %>
+		<%= image_tag("flowerPatch.jpg", :alt => "dennissumlin.com", :class => "round") %>
+		<%= image_tag("ducks.jpg", :alt => "dennissumlin.com", :class => "round") %>
+		<%= image_tag("purpleFlowers.jpg", :alt => "dennissumlin.com", :class => "round") %>	
+			
+			
+			
+	</td>	
 	<td class="sidebar round">
 		 	<%= render 'users/shared/user_info.html' %>
 
@@ -26,9 +42,11 @@
 <h1>Welcome To Our Journal</h1>
 <p>Welcome!!! This site was created by hand with Ruby on Rails. Sign up below and blog away!! I will posting random thoughts and pics for you to comment on. This is a journal site to share your thoughts and feelings with the rest of us. Thanks for looking! </p>
 <%= link_to "Become a member now!", 'signup', :class => "signup_button round" %><br />
-<%= image_tag("river.jpg", :alt => "dennissumlin.com", :class => "round") %> <%= image_tag("pinkflower.jpg", :alt => "dennissumlin.com", :class => "round") %> <%= image_tag("flowerPatch2.jpg", :alt => "dennissumlin.com", :class => "round") %> 
-<%= image_tag("beach.jpg", :alt => "dennissumlin.com", :class => "round") %> <%= image_tag("duck.jpg", :alt => "dennissumlin.com", :class => "round") %> <%= image_tag("wall.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+<a href="http://electric-planet-3706.heroku.com/assets/river-bfde881f065aa531972c8056178ce01a.jpg" target=_blank><%= image_tag("river.jpg", :alt => "dennissumlin.com", :class => "round") %></a> 
+<%= image_tag("pinkflower.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+<%= image_tag("flowerPatch2.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+<%= image_tag("beach.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+<%= image_tag("duck.jpg", :alt => "dennissumlin.com", :class => "round") %> 
+<%= image_tag("wall.jpg", :alt => "dennissumlin.com", :class => "round") %> 
 <%= image_tag("window.jpg", :alt => "dennissumlin.com", :class => "round") %>
-
-
 <% end %>

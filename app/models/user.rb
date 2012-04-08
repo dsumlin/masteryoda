@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
                           :source =>  :follower 
     
     
+    
+    
     has_attached_file :photo,
     :styles => {
     :thumb=> "100x100#",
