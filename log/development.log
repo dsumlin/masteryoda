@@ -26915,3 +26915,148 @@ Served asset /tower.jpg - 304 Not Modified (0ms)
 
 Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-04-07 21:20:11 -0400
 Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_stylesheets.html.erb (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Served asset /blueprint/screen.css - 200 OK (0ms)
+
+
+Started GET "/assets/blueprint/custom.css?body=1" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Served asset /blueprint/custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Served asset /pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Served asset /sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-07 21:38:33 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/ezlogo.png" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /ezlogo.png - 200 OK (0ms)
+
+
+Started GET "/assets/dunkmans.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /dunkmans.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/kobeGlass.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /kobeGlass.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/kdurants.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /kdurants.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/mangos2.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /mangos2.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/vadar.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /vadar.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/shroom.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /shroom.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/tower.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /tower.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/river.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /river.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/pinkflower.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /pinkflower.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/flowerPatch2.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /flowerPatch2.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/beach.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /beach.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/duck.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /duck.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/wall.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /wall.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/window.jpg" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /window.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-04-07 21:38:34 -0400
+Served asset /blueprint/print.css - 200 OK (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2012-04-07 21:38:38 -0400
+Processing by PagesController#about as HTML
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_stylesheets.html.erb (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-04-07 21:38:59 -0400
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_stylesheets.html.erb (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-04-07 23:03:13 -0400
+Processing by UsersController#new as HTML
+  Rendered users/shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_stylesheets.html.erb (1.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.1ms)
