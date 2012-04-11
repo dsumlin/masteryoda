@@ -3,7 +3,7 @@ module ApplicationHelper
 
 
     def title 
-        base_title = "Our Journal"
+        base_title = "DenSum's Shoe Blog"
         if @title.nil?
             base_title
             else
@@ -13,7 +13,7 @@ module ApplicationHelper
     
     def logo
         
-        image_tag("shoeLogo2.jpg", :alt => "dennissumlin.com", :class => "round")
+        image_tag("ezlogo.png", :alt => "dennissumlin.com", :class => "round")
         
         end
     

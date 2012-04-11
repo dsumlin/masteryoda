@@ -188,7 +188,12 @@ background: white;
 
 
 }
-
+p img {
+	
+	width: 160px;
+	height: 100px;
+	
+}
 td.main {
 
 width: 70%;
